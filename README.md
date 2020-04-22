@@ -1,2 +1,0 @@
-# jsTrain
-Created with CodeSandbox

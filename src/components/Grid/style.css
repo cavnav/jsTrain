@@ -1,0 +1,123 @@
+:root {
+  --cellSize: 40px;
+}
+
+.container {
+  padding: 40px;
+}
+
+#grid {
+  display: grid;
+  margin: 0px 40px;
+  box-sizing: content-box;
+  border: 1px solid;
+  background-color: black;
+  color: black;
+}
+
+#grid > div {
+  border: 1px solid;
+}
+
+#grid .rowTitle,
+#grid .colTitle {
+  font-weight: 800;
+}
+
+#grid > div {
+  font-size: 12px;
+  padding: 0.5em;
+  text-align: center;
+}
+
+#grid div::before {
+  content: "";
+  padding-bottom: 100%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.gridTemplateRows-2 {
+  grid-template-rows: repeat(2, 1fr);
+}
+.gridTemplateRows-3 {
+  grid-template-rows: repeat(3, 1fr);
+}
+.gridTemplateRows-4 {
+  grid-template-rows: repeat(4, var(--cellSize));
+}
+.gridTemplateRows-5 {
+  grid-template-rows: repeat(5, var(--cellSize));
+}
+.gridTemplateRows-6 {
+  grid-template-rows: repeat(6, var(--cellSize));
+}
+.gridTemplateRows-7 {
+  grid-template-rows: repeat(7, var(--cellSize));
+}
+.gridTemplateRows-8 {
+  grid-template-rows: repeat(8, var(--cellSize));
+}
+
+.gridTemplateColumns-2 {
+  grid-template-columns: repeat(2, var(--cellSize));
+}
+.gridTemplateColumns-3 {
+  grid-template-columns: repeat(3, var(--cellSize));
+}
+.gridTemplateColumns-4 {
+  grid-template-columns: repeat(4, var(--cellSize));
+}
+.gridTemplateColumns-5 {
+  grid-template-columns: repeat(5, var(--cellSize));
+}
+.gridTemplateColumns-6 {
+  grid-template-columns: repeat(6, var(--cellSize));
+}
+.gridTemplateColumns-7 {
+  grid-template-columns: repeat(7, var(--cellSize));
+}
+.gridTemplateColumns-8 {
+  grid-template-columns: repeat(8, var(--cellSize));
+}
+
+/* Add border bottom to all items */
+.item {
+  border-bottom: 1px solid black;
+}
+
+/* Remove border bottom from last item & from second last if its odd */
+.item:last-child,
+.item:nth-last-child(2):nth-child(odd) {
+  border-bottom: none;
+}
+
+/* Add right border to every second item */
+.item:nth-child(odd) {
+  border-right: 1px solid black;
+}
+
+.ex-2.guess-word {
+  color: green !important;
+  font-weight: 800;
+}
+
+.ex-11.sprite {
+  background-image: url(ex11.png);
+  background-position-x: 0px;
+  background-repeat: no-repeat;
+  background-color: #ffffff;
+}
+
+.flex {
+  display: flex;
+}
+
+.exercise {
+  display: flex;
+  flex: 2 1 auto;
+  flex-direction: column;
+  padding: 10px;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
